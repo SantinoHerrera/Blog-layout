@@ -1,0 +1,34 @@
+@media screen and (max-width: 730px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      padding: 0rem 1rem;
+    }
+  }
+  .img-wrapper {
+    width: 300px;
+  }
+
+  .container .article-container .article {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1077px) {
+  .container .article-container {
+    justify-content: center;
+
+    .article {
+      padding: 2rem 0rem;
+    }
+
+    aside {
+      padding: 1rem 0rem 0rem 0rem;
+    }
+  }
+
+  .img-wrapper {
+    margin: 0;
+  }
+}

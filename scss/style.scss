@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  font-family: 'B612 Mono', monospace;
+}
+
+.container {
+  flex-grow: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-size: cover;
+
+  .figure-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem 2rem;
+    justify-content: space-evenly;
+    background: #ece9e6;
+    background: linear-gradient(to left, #ffffff, #ece9e6);
+  }
+
+  .article-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem 2rem;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+
+  li {
+    padding: 2rem 1rem;
+  }
+}
+
+figure {
+  padding: 2rem 2rem;
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
+
+.badge {
+  position: absolute;
+  display: flex;
+  background: silver;
+  font-size: 0.5rem;
+  width: 100px;
+  height: 35px;
+  padding: 0;
+  margin: 0;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  align-items: center;
+  justify-content: center;
+  top: 20px;
+  right: 20px;
+}
+
+.figure1 {
+  background: url('../img/food.jpg') no-repeat center center/cover;
+  background-size: contain;
+}
+
+.figure2 {
+  background: url('../img/place.jpg') no-repeat center center/cover;
+  background-size: contain;
+}
+
+.figure3 {
+  background: url('../img/trip.jpg') no-repeat center center/cover;
+  background-size: contain;
+}
+
+.bio {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .about-me {
+    background: url('../img/pug.jpg') no-repeat center center/cover;
+    background-size: contain;
+    width: 100%;
+    height: 70%;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+
+  textarea {
+    resize: none;
+    margin: 1rem 0rem;
+  }
+
+  .btn {
+    width: 95%;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    outline: none;
+    transition: all 0.2s ease-in;
+    border-radius: 8px;
+    background-color: #373b44;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+aside {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.img-wrapper {
+  background-color: aqua;
+  width: 600px;
+  height: 500px;
+  margin-left: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  background: #ece9e6;
+  background: linear-gradient(to left, #ffffff, #ece9e6);
+
+  .article {
+    width: 350px;
+    height: 300px;
+    background: url('../img/world_trip.jpg') no-repeat center center/cover;
+    background-size: contain;
+    padding: 2rem 2rem 0rem 10rem;
+  }
+
+  :last-child {
+    overflow: scroll;
+  }
+  p {
+    margin-top: 1rem;
+  }
+}
+
+$size: 160px;
+
+.btn-slide {
+  position: fixed;
+  bottom: 50vh;
+  font-size: 3.5rem;
+  width: ($size/2);
+  height: $size;
+  background: rgba($color: gray, $alpha: 0.3);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &.slide-left {
+    border-bottom-right-radius: $size * 2;
+    border-top-right-radius: $size * 2;
+    left: -60px;
+    &:hover {
+      left: -20px;
+      background: rgba($color: darkgray, $alpha: 1);
+      transition: left 0.1s ease-in;
+    }
+  }
+
+  &.slide-right {
+    border-bottom-left-radius: $size * 2;
+    border-top-left-radius: $size * 2;
+    right: -60px;
+    &:hover {
+      right: -20px;
+      background: rgba($color: darkgray, $alpha: 1);
+      transition: right 0.1s ease-in;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #373b44;
+  background: linear-gradient(to right, #4286f4, #373b44);
+
+  h6 {
+    padding: 5rem 0rem;
+  }
+}
+
+@import 'queries';
